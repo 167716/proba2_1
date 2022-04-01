@@ -13,16 +13,37 @@ class Main {
 
     for(int i=0;i<rozmiar;i++){
       zamiana[i]=tekst.charAt(i);
-    }
-     for(int i=0;i<rozmiar;i++){
-      if()
-    }
-   /* char a='p';
-    int b=(int)a;
-    System.out.println(a+" "+b);
-    b=b-32;
-    a=(char)b;
-    System.out.println(a+" "+b);*/
     
+    }
+    int wartosc;
+    int licznik = 0;
+     for(int i=0;i<rozmiar;i++){
+      wartosc=zamiana[i];
+
+       if(wartosc>=97 && wartosc<=122){
+         wartosc = wartosc - 32;
+         zamiana[i]=(char)wartosc;
+          licznik++;
+       }
+         
+       else{
+          if(wartosc>=65 && wartosc<=90){
+         wartosc = wartosc + 32;
+         zamiana[i]=(char)wartosc;
+         licznik++;
+       }
+         else{
+           if(wartosc==32){
+             wartosc = 95;
+             zamiana[i]=(char)wartosc;
+             licznik++;
+           }
+           else;
+         }
+       }
+       System.out.print(zamiana[i]);
+    }
+    System.out.println();System.out.println();
+    System.out.println("Liczba zamian: "+licznik);
   }
 }
